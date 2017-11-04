@@ -12,6 +12,8 @@
     map: {
       // our app is within the app folder
       'app': 'app',
+      // update required by ng2-dnd library
+      'ng2-dnd': 'node_modules/ng2-dnd/bundles/index.umd.js',
 
       // angular bundles
       '@angular/core': 'npm:@angular/core/bundles/core.umd.js',
