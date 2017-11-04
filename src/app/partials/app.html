@@ -1,0 +1,41 @@
+<div class="container-fluid">
+    <div class="page-header">
+        <h1>MIS Test
+            <br>
+            <small>Svetlana Savchenko</small>
+        </h1>
+    </div>
+    <div class="row">
+        <div class="col-xs-10 col-xs-offset-1">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h1 class="title">Alien Reporter API</h1>
+                    <p>This app displays the data from the Alien Reporter device. You can view the details of aliens sightings
+                        here below.</p>
+                </div>
+                <!-- Check if formData is defined -->
+                <div class="panel-body" *ngIf="formData">
+                    <p>
+                        <strong>Form ID: </strong>{{ formData.formId }}</p>
+                    <p>
+                        <strong>Last changed by: </strong>{{ formData.lastChangedBy }}</p>
+                    <p>
+                        <strong>On: </strong>{{ formData.lastChangedDate }}</p>
+
+                    <!-- Check if formData and formData.form are defined -->
+                    <div *ngIf="formData && formData.form">
+                        <!-- *ngFor helps to iterate over the array and display every item individually -->
+                        <ul *ngFor="let items of formData.form" class="list-group col-sm-6 col-md-4" draggable="true">
+                            <li class="list-group-item" style="background-color: #f0ad4e;">
+                                <strong>Form Id: </strong>{{ items.id }}</li>
+                            <li class="list-group-item">
+                                <strong>Caption: </strong>{{ items.caption }}</li>
+                            <li class="list-group-item">
+                                <strong>Type: </strong>{{ items.type }}</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
