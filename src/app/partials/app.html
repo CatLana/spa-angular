@@ -23,10 +23,11 @@
                         <strong>On: </strong>{{ formData.lastChangedDate }}</p>
 
                     <!-- Check if formData and formData.form are defined -->
-                    <div *ngIf="formData && formData.form">
+                    <div *ngIf="formData && formData.form" dnd-sortable-container [sortableData]="formData.form">
                         <!-- *ngFor helps to iterate over the array and display every item individually -->
-                        <ul *ngFor="let items of formData.form" class="list-group col-sm-6 col-md-4" draggable="true">
-                            <li class="list-group-item" style="background-color: #f0ad4e;">
+                        <ul *ngFor="let items of formData.form;  let i = index" class="list-group col-sm-6 col-md-4" dnd-sortable [sortableIndex]="i">
+ 
+                            <li class="list-group-item form-header-line">
                                 <strong>Form Id: </strong>{{ items.id }}</li>
                             <li class="list-group-item">
                                 <strong>Caption: </strong>{{ items.caption }}</li>
