@@ -1,6 +1,6 @@
-<h1>Angular web SPA </h1>
+<h1>Angular web SPA (Tech test for a junior position in 2017) </h1>
 
-This is a single page web application developed in Angular which invokes the JSON endpoint upon startup and parses it accordingly.
+This is a single page web application developed in Angular which invokes the JSON endpoint upon startup and parses it accordingly. 
 
 <h2>Description</h2>
 
